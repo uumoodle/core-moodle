@@ -1,3 +1,24 @@
+Utrecht University Edits:
+
+This is a local fork for Utrecht University of the main moodle repository.
+We have made 2 local modifications to the code.
+
+1. To fix too strict sandbox settings in tinymce editor.
+
+https://github.com/uumoodle/core-moodle/commit/001aa4193cd669162d7aa836c89708cc397890e1
+
+Internal issue https://utrechtuniversity.atlassian.net/browse/MDL-1134
+
+2. To fix broken file serving when filenames contain space
+
+https://github.com/uumoodle/core-moodle/commit/25de687a23203063457941d2a8858f40cb001a44
+
+This commit is to fix https://tracker.moodle.org/browse/MDL-81604
+
+It is based on the pull request by Tim Schroeder, which had not yet been merged into core moodle
+
+****************************************************************************************************************************
+
                                  .-..-.
    _____                         | || |
   /____/-.---_  .---.  .---.  .-.| || | .---.
