@@ -798,6 +798,7 @@ function setup_get_remote_url() {
         // - PHP versions lesser than 5.6.3 and 5.5.18.
         if (isset($_SERVER['PATH_INFO']) && (php_sapi_name() === 'fpm-fcgi') && isset($_SERVER['SCRIPT_NAME'])) {
             $pathinfodec = rawurldecode($_SERVER['PATH_INFO']);
+            $_SERVER['PATH_INFO'] = $pathinfodec;
             $lenneedle = strlen($pathinfodec);
             // Checks whether SCRIPT_NAME ends with PATH_INFO, URL-decoded.
             if (substr($_SERVER['SCRIPT_NAME'], -$lenneedle) === $pathinfodec) {
